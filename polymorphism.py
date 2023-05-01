@@ -32,3 +32,4 @@ plane1=Plane("Garuda Indonesia","Airbus")
 
 for x in(car1,boat1,plane1):
     x.move()
+    print(x.model)
