@@ -1,0 +1,6 @@
+1683254154030	geckodriver	INFO	Listening on 127.0.0.1:53554
+1683254154489	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/p2/0cjbcyhx47b8wz7h1lw4jx240000gn/T/rust_mozprofileuHc5yx"
+2023-05-05 09:36:12.141 firefox-bin[32928:375530] Unable to install helper!
+WebDriver BiDi listening on ws://127.0.0.1:53555
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://127.0.0.1:53555/devtools/browser/d7867a08-8bde-457b-b455-64e7a94d9da0
