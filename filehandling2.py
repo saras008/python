@@ -12,3 +12,4 @@ f=open("/Users/saras008/repo-iyus/python/test.txt", "r")
 print(f.read())
 
 f=open("test2.txt", "x")
+
