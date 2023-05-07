@@ -1,4 +1,5 @@
 import shutil
+import psutil
 
 def check_disk_usage(disk):
     du = shutil.disk_usage(disk)
@@ -7,3 +8,7 @@ def check_disk_usage(disk):
     return free > 20
 
 check_disk_usage("/")
+
+def cpu_usage():
+    usage = psutil.cpu_percent()
+cpu_usage()
