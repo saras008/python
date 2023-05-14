@@ -21,7 +21,7 @@ def error_search(log_file):
 
 def file_output(returned_errors):
     try:
-        with open(os.path.expanduser('~') + '/repo-iyus/hasil-test.log', 'w') as file:
+        with open('hasil-test.log', 'w') as file:
             for x in returned_errors:
                 # print(x)
                 file.write(x)
