@@ -1,21 +1,29 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from Screenshot import Screenshot
+from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+capabilities=DesiredCapabilities().FIREFOX
+capabilities['acceptSslCerts'] = False
 
 
-username="simatupang2000@gmail.com"
-password="B0k3rdij4l4n"
+username="root"
+password="calvin"
 
-driver = webdriver.Firefox(executable_path=r'/Users/saras008/Downloads/geckodriver')
+
+driver = webdriver.Firefox(executable_path=r'/Users/saras008/Downloads/geckodriver',capabilities=capabilities)
 
 # head to github login page
-driver.get("https://github.com/login")
+driver.get("https://192.168.247.143")
+driver.find_element("id", "advancedButton").click()
+driver.find_element("id", "exceptionDialogButton").click()
 # find username/email field and send the username itself to the input field
-driver.find_element("id", "login_field").send_keys(username)
-# find password input field and insert password as well
-driver.find_element("id", "password").send_keys(password)
-# click login button
-driver.find_element("name", "commit").click()
+driver.find_element("name", "user").send_keys(username)
+# # find password input field and insert password as well
+# driver.find_element("id", "password").send_keys(password)
+# # click login button
+# driver.find_element("id", "submit_lbl").click()
 
 # ob = Screenshot.Screenshot()
 
