@@ -17,5 +17,5 @@ if __name__ == '__main__':
         config = configparser.ConfigParser()
         config.read_file(args.config)
         args.n1 =int(config['ARGUE']['n1'])
-        args.n2 =int(config['ARGUe']['n2'])
+        args.n2 =int(config['ARGUE']['n2'])
     main(args.n1,args.n2)
