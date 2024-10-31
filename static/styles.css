@@ -1,0 +1,9 @@
+.console {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    overflow: auto;
+    max-height: 300px;
+}
