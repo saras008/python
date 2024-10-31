@@ -1,3 +1,0 @@
-name,color,type
-carnation,pink,annual
-daffodil,yellow,parennial
