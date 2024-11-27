@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>htpasswd Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">.htpasswd Generator</h1>
+        <p>Use this tool to create `.htpasswd` entries to secure your web directories.</p>
+        <form method="POST" action="/htpasswd" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                <label for="username">Username</label>
+                {{ form.username(class="form-control", id="username") }}
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                {{ form.password(class="form-control", id="password") }}
+            </div>
+            <div class="form-group">
+                <label for="algorithm">Hashing Algorithm</label>
+                {{ form.algorithm(class="form-control", id="algorithm") }}
+            </div>
+            <button type="submit" class="btn btn-primary" name="generate">Generate</button>
+            <button type="submit" class="btn btn-secondary" name="download">Download as .htpasswd</button>
+        </form>
+        {% if result %}
+        <div class="alert alert-success mt-4" role="alert">
+            <strong>Your Htpassword: </strong> {{ result | e }}
+        </div>
+        {% elif error %}
+        <div class="alert alert-danger mt-4" role="alert">
+            <strong>Error:</strong> {{ error | e }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
