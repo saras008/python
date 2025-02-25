@@ -1,0 +1,20 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+button {
+    width: 100%;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Rate Converter</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Currency Rate Converter</h2>
+        <form method="POST" action="/">
+            <div class="form-group">
+                <label for="amount">Amount:</label>
+                <input type="number" class="form-control" id="amount" name="amount" placeholder="Enter amount" required>
+            </div>
+            <div class="form-group">
+                <label for="from_currency">From Currency:</label>
+                <select class="form-control" id="from_currency" name="from_currency">
+                    <option value="USD">USD - United States Dollar</option>
+                    <option value="IDR">IDR - Indonesian Rupiah</option>
+                    <option value="EUR">EUR - EUROr</option>
+                    <option value="JPY">IDR - Japanese Yen</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to_currency">To Currency:</label>
+                <select class="form-control" id="to_currency" name="to_currency">
+                    <option value="IDR">IDR - Indonesian Rupiah</option>
+                    <option value="USD">USD - United States Dollar</option>
+                    <option value="EUR">EUR - EUROr</option>
+                    <option value="JPY">IDR - Japanese Yen</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Convert</button>
+        </form>
+        {% if converted_amount is not none %}
+            <div class="mt-4">
+                <h4>Converted Amount {{ from_currency }} to {{ to_currency }}: {{ converted_amount | round(2) }}</h4>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
